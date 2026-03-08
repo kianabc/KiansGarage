@@ -1,0 +1,882 @@
+[
+  {
+    "id": "06515b47-c704-4457-b7ac-566b0601240f",
+    "show": true,
+    "sold": true,
+    "ranking": 32,
+    "title": "Specialized Stumpjumper Expert",
+    "description": "",
+    "specs": [],
+    "originalPrice": "",
+    "price": "",
+    "year": "",
+    "mainImage": "/images/bikes/06515b47-c704-4457-b7ac-566b0601240f/main.jpg",
+    "gallery": [],
+    "slug": "specialized-stumpjumper-expert",
+    "background": "",
+    "foreground": ""
+  },
+  {
+    "id": "1d714a98-1ebe-4bed-8c55-17da6ef3a9c3",
+    "show": true,
+    "sold": false,
+    "ranking": 20,
+    "title": "Fuji Altamira LTD Team Edition",
+    "description": "If you’re looking for a bike with some serious \"pro peloton\" soul without the boring, cookie-cutter look, this Fuji Altamira LTD is it. This isn't the watered-down replica; it’s the elite Team Edition, the same frame that actually won the Vuelta a España. The standout feature is the Integrated Seat Post (ISP), which looks incredibly slick and makes the bike feel like a total rocket ship. Tipping the scales at under 15 lbs (~14.5 lbs!), this thing is stupidly light, making climbs feel like less of a chore and handling corners like it’s on rails. This is for the rider who wants a fast, head-turning machine that feels \"pro\" but doesn't take itself too seriously. It’s a piece of racing history that’s still more than ready to hunt for PRs on your local weekend group ride.",
+    "specs": [
+      {
+        "label": "Size",
+        "value": "Small (I'm 5' 8\")"
+      },
+      {
+        "label": "Frame",
+        "value": "Fuji Altamira Carbon, Team Edition, 2022"
+      },
+      {
+        "label": "Fork",
+        "value": "Fuji Carbon Road Fork"
+      },
+      {
+        "label": "Groupset",
+        "value": "SRAM Force"
+      },
+      {
+        "label": "Shifters",
+        "value": "SRAM Force"
+      },
+      {
+        "label": "Front Derailleur",
+        "value": "SRAM Force"
+      },
+      {
+        "label": "Rear Derailleur",
+        "value": "SRAM Force"
+      },
+      {
+        "label": "Crankset",
+        "value": "SRAM Force"
+      },
+      {
+        "label": "Cassette",
+        "value": "SRAM Force"
+      },
+      {
+        "label": "Brakes",
+        "value": "SRAM Force Hydraulic Disc Brakes"
+      },
+      {
+        "label": "Wheelset",
+        "value": "Reynolds Solitude"
+      },
+      {
+        "label": "Tires",
+        "value": "Road tires, set up and ready to ride"
+      },
+      {
+        "label": "Handlebars",
+        "value": "Carbon Bars"
+      },
+      {
+        "label": "Stem",
+        "value": "Alloy Stem"
+      },
+      {
+        "label": "Seatpost",
+        "value": "Carbon Seatpost"
+      },
+      {
+        "label": "Saddle",
+        "value": "Performance Road Saddle"
+      },
+      {
+        "label": "Cable Routing",
+        "value": "Internal"
+      },
+      {
+        "label": "Condition",
+        "value": "Excellent"
+      },
+      {
+        "label": "Finish",
+        "value": "Team Edition Colorway"
+      }
+    ],
+    "originalPrice": "$4,800",
+    "price": "$1,250",
+    "year": "2012",
+    "mainImage": "/images/bikes/1d714a98-1ebe-4bed-8c55-17da6ef3a9c3/main.jpg",
+    "gallery": [
+      "/images/bikes/1d714a98-1ebe-4bed-8c55-17da6ef3a9c3/1.jpg",
+      "/images/bikes/1d714a98-1ebe-4bed-8c55-17da6ef3a9c3/2.jpg",
+      "/images/bikes/1d714a98-1ebe-4bed-8c55-17da6ef3a9c3/3.jpg",
+      "/images/bikes/1d714a98-1ebe-4bed-8c55-17da6ef3a9c3/4.jpg",
+      "/images/bikes/1d714a98-1ebe-4bed-8c55-17da6ef3a9c3/5.jpg",
+      "/images/bikes/1d714a98-1ebe-4bed-8c55-17da6ef3a9c3/6.jpg",
+      "/images/bikes/1d714a98-1ebe-4bed-8c55-17da6ef3a9c3/7.jpg",
+      "/images/bikes/1d714a98-1ebe-4bed-8c55-17da6ef3a9c3/8.jpg",
+      "/images/bikes/1d714a98-1ebe-4bed-8c55-17da6ef3a9c3/9.jpg",
+      "/images/bikes/1d714a98-1ebe-4bed-8c55-17da6ef3a9c3/10.jpg",
+      "/images/bikes/1d714a98-1ebe-4bed-8c55-17da6ef3a9c3/11.jpg",
+      "/images/bikes/1d714a98-1ebe-4bed-8c55-17da6ef3a9c3/12.jpg",
+      "/images/bikes/1d714a98-1ebe-4bed-8c55-17da6ef3a9c3/13.jpg"
+    ],
+    "slug": "fuji-altamira-ltd-team-edition",
+    "background": "#000000",
+    "foreground": "#BFF96D"
+  },
+  {
+    "id": "3132f6a0-bb96-4909-96fe-a1a6439ca125",
+    "show": true,
+    "sold": true,
+    "ranking": 22,
+    "title": "Ibis Ripmo",
+    "description": "",
+    "specs": [],
+    "originalPrice": "",
+    "price": "",
+    "year": "",
+    "mainImage": "/images/bikes/3132f6a0-bb96-4909-96fe-a1a6439ca125/main.jpg",
+    "gallery": [],
+    "slug": "ibis-ripmo",
+    "background": "",
+    "foreground": ""
+  },
+  {
+    "id": "455c9099-588f-4b30-be2a-b0754d65fcce",
+    "show": true,
+    "sold": true,
+    "ranking": 44,
+    "title": "Specialized Levo Comp Alloy",
+    "description": "",
+    "specs": [],
+    "originalPrice": "",
+    "price": "",
+    "year": "",
+    "mainImage": "/images/bikes/455c9099-588f-4b30-be2a-b0754d65fcce/main.jpg",
+    "gallery": [],
+    "slug": "specialized-levo-comp-alloy",
+    "background": "",
+    "foreground": ""
+  },
+  {
+    "id": "4c6a337e-3956-4291-a2fa-fc51f81458cd",
+    "show": true,
+    "sold": true,
+    "ranking": 42,
+    "title": "Scott 16\"",
+    "description": "",
+    "specs": [],
+    "originalPrice": "",
+    "price": "",
+    "year": "",
+    "mainImage": "/images/bikes/4c6a337e-3956-4291-a2fa-fc51f81458cd/main.jpg",
+    "gallery": [],
+    "slug": "scott-16\"",
+    "background": "",
+    "foreground": ""
+  },
+  {
+    "id": "50aede3a-324f-4c46-893e-78b6f1ff4414",
+    "show": true,
+    "sold": true,
+    "ranking": 50,
+    "title": "Specialized Levo Expert",
+    "description": "",
+    "specs": [],
+    "originalPrice": "",
+    "price": "",
+    "year": "",
+    "mainImage": "/images/bikes/50aede3a-324f-4c46-893e-78b6f1ff4414/main.jpg",
+    "gallery": [],
+    "slug": "specialized-levo-expert",
+    "background": "",
+    "foreground": ""
+  },
+  {
+    "id": "5ad452c2-f189-4151-81dd-52106e56d1cb",
+    "show": true,
+    "sold": true,
+    "ranking": 52,
+    "title": "Specialized Kenevo Expert",
+    "description": "",
+    "specs": [],
+    "originalPrice": "",
+    "price": "",
+    "year": "",
+    "mainImage": "/images/bikes/5ad452c2-f189-4151-81dd-52106e56d1cb/main.jpg",
+    "gallery": [],
+    "slug": "specialized-kenevo-expert",
+    "background": "",
+    "foreground": ""
+  },
+  {
+    "id": "630fb44f-cb55-4ae6-b74a-b2c247aa4f73",
+    "show": true,
+    "sold": true,
+    "ranking": 30,
+    "title": "Specialized Levo Comp Carbon",
+    "description": "",
+    "specs": [],
+    "originalPrice": "",
+    "price": "",
+    "year": "",
+    "mainImage": "/images/bikes/630fb44f-cb55-4ae6-b74a-b2c247aa4f73/main.jpg",
+    "gallery": [],
+    "slug": "specialized-levo-comp-carbon",
+    "background": "",
+    "foreground": ""
+  },
+  {
+    "id": "66227f06-b622-45b1-80fa-fde983e7a192",
+    "show": true,
+    "sold": true,
+    "ranking": 28,
+    "title": "Specialized Rockhopper Expert",
+    "description": "",
+    "specs": [],
+    "originalPrice": "",
+    "price": "",
+    "year": "",
+    "mainImage": "/images/bikes/66227f06-b622-45b1-80fa-fde983e7a192/main.jpg",
+    "gallery": [],
+    "slug": "specialized-rockhopper-expert",
+    "background": "",
+    "foreground": ""
+  },
+  {
+    "id": "7a6b0c55-a10e-456e-8ef5-f667b1e7a860",
+    "show": true,
+    "sold": true,
+    "ranking": 24,
+    "title": "Specialized Levo Comp Carbon",
+    "description": "",
+    "specs": [],
+    "originalPrice": "",
+    "price": "",
+    "year": "",
+    "mainImage": "/images/bikes/7a6b0c55-a10e-456e-8ef5-f667b1e7a860/main.jpg",
+    "gallery": [],
+    "slug": "specialized-levo-comp-carbon",
+    "background": "",
+    "foreground": ""
+  },
+  {
+    "id": "9128bae5-33f1-4d83-8630-65b0b73c7d13",
+    "show": true,
+    "sold": true,
+    "ranking": 38,
+    "title": "Specialized Levo Comp Carbon",
+    "description": "",
+    "specs": [],
+    "originalPrice": "",
+    "price": "",
+    "year": "",
+    "mainImage": "/images/bikes/9128bae5-33f1-4d83-8630-65b0b73c7d13/main.jpg",
+    "gallery": [],
+    "slug": "specialized-levo-comp-carbon",
+    "background": "",
+    "foreground": ""
+  },
+  {
+    "id": "924960a1-f74e-4828-be74-3d95fa322881",
+    "show": true,
+    "sold": true,
+    "ranking": 21,
+    "title": "Salsa Mukluk",
+    "description": "",
+    "specs": [],
+    "originalPrice": "",
+    "price": "",
+    "year": "",
+    "mainImage": "/images/bikes/924960a1-f74e-4828-be74-3d95fa322881/main.jpg",
+    "gallery": [],
+    "slug": "salma-mukluk",
+    "background": "",
+    "foreground": ""
+  },
+  {
+    "id": "9815e819-6263-4993-94bb-3db7bd832903",
+    "show": true,
+    "sold": true,
+    "ranking": 23,
+    "title": "Specialized Levo SL Comp Carbon",
+    "description": "",
+    "specs": [],
+    "originalPrice": "",
+    "price": "",
+    "year": "",
+    "mainImage": "/images/bikes/9815e819-6263-4993-94bb-3db7bd832903/main.jpg",
+    "gallery": [],
+    "slug": "specialized-levo-sl-comp-carbon",
+    "background": "",
+    "foreground": ""
+  },
+  {
+    "id": "98e9e15a-948d-4bec-bc9d-9f2e011a707f",
+    "show": true,
+    "sold": true,
+    "ranking": 10,
+    "title": "Specialized Turbo Levo Comp Carbon",
+    "description": "This Specialized Levo Comp Carbon has seen very little use, with under 150 miles on it, and it shows. The bike is in excellent condition and looks nearly new, with only a few minor scuffs on the rear triangle from normal riding. It has been recently serviced and is fully dialed, ready to be ridden hard from day one. The carbon frame paired with the SRAM GX drivetrain delivers a solid, reliable e-MTB setup that climbs effortlessly and descends with confidence. This is a great opportunity to pick up a barely used Levo that is ready to go without the new-bike price.",
+    "specs": [
+      {
+        "label": "Size",
+        "value": "Large (S4)"
+      },
+      {
+        "label": "Frame",
+        "value": "Specialized Levo Carbon Frame, 2020"
+      },
+      {
+        "label": "Motor",
+        "value": "Specialized 2.1 Motor"
+      },
+      {
+        "label": "Battery",
+        "value": "Specialized Integrated Battery"
+      },
+      {
+        "label": "Drive Unit",
+        "value": "Specialized Turbo System"
+      },
+      {
+        "label": "Suspension Platform",
+        "value": "FSR"
+      },
+      {
+        "label": "Fork",
+        "value": "RockShox Front Suspension Fork, 150mm"
+      },
+      {
+        "label": "Rear Shock",
+        "value": "RockShox Rear Shock, 140mm"
+      },
+      {
+        "label": "Drivetrain",
+        "value": "SRAM GX"
+      },
+      {
+        "label": "Shifters",
+        "value": "SRAM GX"
+      },
+      {
+        "label": "Rear Derailleur",
+        "value": "SRAM GX"
+      },
+      {
+        "label": "Cassette",
+        "value": "SRAM GX"
+      },
+      {
+        "label": "Brakes",
+        "value": "SRAM Hydraulic Disc Brakes"
+      },
+      {
+        "label": "Wheel Size",
+        "value": "29\""
+      },
+      {
+        "label": "Tires",
+        "value": "Trail Tires, ready to ride"
+      },
+      {
+        "label": "Seatpost",
+        "value": "Dropper Post"
+      },
+      {
+        "label": "Handlebars",
+        "value": "Alloy Bars"
+      },
+      {
+        "label": "Stem",
+        "value": "Alloy Stem"
+      },
+      {
+        "label": "Cable Routing",
+        "value": "Internal"
+      },
+      {
+        "label": "Condition",
+        "value": "Excellent"
+      },
+      {
+        "label": "Notes",
+        "value": "Recently serviced and ready to ride"
+      }
+    ],
+    "originalPrice": "$7,000",
+    "price": "$3,850",
+    "year": "2020",
+    "mainImage": "/images/bikes/98e9e15a-948d-4bec-bc9d-9f2e011a707f/main.jpg",
+    "gallery": [
+      "/images/bikes/98e9e15a-948d-4bec-bc9d-9f2e011a707f/1.jpg",
+      "/images/bikes/98e9e15a-948d-4bec-bc9d-9f2e011a707f/2.jpg",
+      "/images/bikes/98e9e15a-948d-4bec-bc9d-9f2e011a707f/3.jpg",
+      "/images/bikes/98e9e15a-948d-4bec-bc9d-9f2e011a707f/4.jpg",
+      "/images/bikes/98e9e15a-948d-4bec-bc9d-9f2e011a707f/5.jpg",
+      "/images/bikes/98e9e15a-948d-4bec-bc9d-9f2e011a707f/6.jpg",
+      "/images/bikes/98e9e15a-948d-4bec-bc9d-9f2e011a707f/7.jpg",
+      "/images/bikes/98e9e15a-948d-4bec-bc9d-9f2e011a707f/8.jpg",
+      "/images/bikes/98e9e15a-948d-4bec-bc9d-9f2e011a707f/9.jpg",
+      "/images/bikes/98e9e15a-948d-4bec-bc9d-9f2e011a707f/10.jpg"
+    ],
+    "slug": "specialized-turbo-levo-comp-carbon",
+    "background": "#FF0000",
+    "foreground": "#000000"
+  },
+  {
+    "id": "9bd59740-5dca-432e-9664-156f1fc313f3",
+    "show": true,
+    "sold": true,
+    "ranking": 40,
+    "title": "Specialized Levo SL Comp Carbon",
+    "description": "",
+    "specs": [],
+    "originalPrice": "",
+    "price": "",
+    "year": "",
+    "mainImage": "/images/bikes/9bd59740-5dca-432e-9664-156f1fc313f3/main.jpg",
+    "gallery": [],
+    "slug": "specialized-levo-sl-comp-carbon",
+    "background": "",
+    "foreground": ""
+  },
+  {
+    "id": "a2749195-91c7-4a9a-be9f-4e557016bbfc",
+    "show": true,
+    "sold": true,
+    "ranking": 46,
+    "title": "Richie Break-away",
+    "description": "",
+    "specs": [],
+    "originalPrice": "",
+    "price": "",
+    "year": "",
+    "mainImage": "/images/bikes/a2749195-91c7-4a9a-be9f-4e557016bbfc/main.jpg",
+    "gallery": [],
+    "slug": "richie-break-away",
+    "background": "",
+    "foreground": ""
+  },
+  {
+    "id": "a9664ff9-c6e5-495c-842d-010d2248b5d8",
+    "show": true,
+    "sold": true,
+    "ranking": 15,
+    "title": "Luna Z1 Ludicrous",
+    "description": "This Luna Z1 with the Ludicrous upgrade is an absolute beast and unlike anything you will find in this price range. With the Bafang Ultra M620 drive tuned by Luna and pushing up to 2,000 watts and 160 Nm of torque, this bike delivers power on a completely different level than typical OEM e-MTBs. Despite the performance, it remains surprisingly light for its class at roughly 62 pounds and feels composed, quiet, and solid on the trail. I used this bike mostly as a commuter, and it has been well maintained, fully serviced, and is ready to be ridden hard. The full carbon frame, top-tier RockShox suspension, SRAM hydraulic brakes, and Maxxis tires make this a legitimate enduro e-MTB that climbs effortlessly and descends with confidence. With a 48V 17.5Ah battery delivering up to 850Wh, real-world range sits around 30 to 40 miles with moderate pedaling, and the fast-removable battery makes charging easy. Simply put, you will not find specs or performance like this on any bike under $3k, pedal or electric.",
+    "specs": [
+      {
+        "label": "Size",
+        "value": "Small/Medium (I'm 5' 8\")"
+      },
+      {
+        "label": "Frame",
+        "value": "Full Carbon Fiber Frame"
+      },
+      {
+        "label": "Motor",
+        "value": "Bafang Ultra Drive M620 with Luna Steel Helical Gears"
+      },
+      {
+        "label": "Power Output",
+        "value": "Ludicrous Upgrade, up to 2,000W"
+      },
+      {
+        "label": "Torque",
+        "value": "160 Nm"
+      },
+      {
+        "label": "Sensor System",
+        "value": "Torque Sensor, Luna-tuned, with Throttle"
+      },
+      {
+        "label": "Battery",
+        "value": "48V 17.5Ah, LG Cells, 850Wh, removable"
+      },
+      {
+        "label": "Range",
+        "value": "Approximately 30–40 miles with moderate pedaling"
+      },
+      {
+        "label": "Display",
+        "value": "DPC-18 Color Display with USB Port"
+      },
+      {
+        "label": "Front Suspension",
+        "value": "RockShox Yari DebonAir, 160mm travel"
+      },
+      {
+        "label": "Rear Suspension",
+        "value": "RockShox Deluxe Select, 230mm x 60mm"
+      },
+      {
+        "label": "Drivetrain",
+        "value": "SRAM SX Eagle, 12-speed"
+      },
+      {
+        "label": "Cassette",
+        "value": "SRAM SX Eagle, HG Driver"
+      },
+      {
+        "label": "Chainring",
+        "value": "40T Wide-Narrow HD, 12-speed, 5x130 BCD"
+      },
+      {
+        "label": "Brakes",
+        "value": "SRAM Guide Hydraulic Disc Brakes, 4-piston"
+      },
+      {
+        "label": "Rotors",
+        "value": "200mm front, 180mm rear, 6-bolt"
+      },
+      {
+        "label": "Wheelset",
+        "value": "Double-Wall Alloy 27.5\" Rims, 40mm internal width"
+      },
+      {
+        "label": "Tires",
+        "value": "Maxxis Minion DHR II 27.5\" x 2.8\" Optional: Mullet setup with Maxxis Rekon 2.6\""
+      },
+      {
+        "label": "Headset",
+        "value": "44/56 Non-Integrated"
+      },
+      {
+        "label": "Seatpost",
+        "value": "KS Dropper Post with Internal Routing"
+      },
+      {
+        "label": "Handlebars",
+        "value": "Luna Handlebars, 810mm width"
+      },
+      {
+        "label": "Stem",
+        "value": "Luna Stem, 50mm, 31.8 clamp"
+      },
+      {
+        "label": "Cranks",
+        "value": "Alloy, 170mm"
+      },
+      {
+        "label": "Pedals",
+        "value": "Luna Lightweight Alloy Flat Pedals"
+      },
+      {
+        "label": "Saddle",
+        "value": "WTB Volt, 135mm"
+      },
+      {
+        "label": "Axles",
+        "value": "Boost 15x110 front, 12x148 rear"
+      },
+      {
+        "label": "Cable Routing",
+        "value": "Fully Internal"
+      },
+      {
+        "label": "Weight",
+        "value": "Approximately 62 lbs (size Medium)"
+      },
+      {
+        "label": "Finish",
+        "value": "Galaxy Black"
+      }
+    ],
+    "originalPrice": "$4,800",
+    "price": "$2,950",
+    "year": "2023",
+    "mainImage": "/images/bikes/a9664ff9-c6e5-495c-842d-010d2248b5d8/main.jpg",
+    "gallery": [
+      "/images/bikes/a9664ff9-c6e5-495c-842d-010d2248b5d8/1.jpg",
+      "/images/bikes/a9664ff9-c6e5-495c-842d-010d2248b5d8/2.jpg",
+      "/images/bikes/a9664ff9-c6e5-495c-842d-010d2248b5d8/3.jpg",
+      "/images/bikes/a9664ff9-c6e5-495c-842d-010d2248b5d8/4.jpg",
+      "/images/bikes/a9664ff9-c6e5-495c-842d-010d2248b5d8/5.jpg",
+      "/images/bikes/a9664ff9-c6e5-495c-842d-010d2248b5d8/6.jpg",
+      "/images/bikes/a9664ff9-c6e5-495c-842d-010d2248b5d8/7.jpg",
+      "/images/bikes/a9664ff9-c6e5-495c-842d-010d2248b5d8/8.jpg"
+    ],
+    "slug": "luna-z1-ludicrous",
+    "background": "#000000",
+    "foreground": "#FF0000"
+  },
+  {
+    "id": "ab842ee7-8dca-4f8a-9cf3-5637680c60c5",
+    "show": true,
+    "sold": true,
+    "ranking": 48,
+    "title": "Specialized FatBoy",
+    "description": "",
+    "specs": [],
+    "originalPrice": "",
+    "price": "",
+    "year": "",
+    "mainImage": "/images/bikes/ab842ee7-8dca-4f8a-9cf3-5637680c60c5/main.jpg",
+    "gallery": [],
+    "slug": "specialized-fatboy",
+    "background": "",
+    "foreground": ""
+  },
+  {
+    "id": "cbf7b8d0-038f-43cb-b4b2-465d82d2d48f",
+    "show": true,
+    "sold": true,
+    "ranking": 35,
+    "title": "Specialized Riprock 16",
+    "description": "",
+    "specs": [],
+    "originalPrice": "",
+    "price": "",
+    "year": "",
+    "mainImage": "/images/bikes/cbf7b8d0-038f-43cb-b4b2-465d82d2d48f/main.jpg",
+    "gallery": [],
+    "slug": "specialized-riprock-16",
+    "background": "",
+    "foreground": ""
+  },
+  {
+    "id": "e589b2df-523b-4068-9937-10f6b247faa9",
+    "show": true,
+    "sold": true,
+    "ranking": 1,
+    "title": "Santa Cruz Nomad",
+    "description": "This is a fully custom Santa Cruz Nomad built with no compromises and upgraded with the highest-end components available @ only 30 lbs! Anyone who knows me will be surprised to see it listed, as this bike has been a personal favorite and something I never planned to sell, but an unexpected new build forced the decision. Every component has been thoughtfully selected, upgraded, and meticulously maintained. The bike has just been fully detailed and serviced from headset to drivetrain and is completely dialed and ready to ride. It rides exactly as you would expect from a top-tier Nomad, stable, fast, incredibly capable, and refined in every detail.",
+    "specs": [
+      {
+        "label": "Size",
+        "value": "Medium"
+      },
+      {
+        "label": "Frame",
+        "value": "Santa Cruz Nomad Carbon CC, 2019"
+      },
+      {
+        "label": "Fork",
+        "value": "RockShox ZEB Ultimate, 170mm, 2024"
+      },
+      {
+        "label": "Rear Shock",
+        "value": "RockShox Super Deluxe Air RCT, 170mm, serviced 2023"
+      },
+      {
+        "label": "Wheelset",
+        "value": "Santa Cruz Reserve Carbon Wheels 27.5\", re-laced 2024"
+      },
+      {
+        "label": "Rear Hub",
+        "value": "Industry Nine Hydra, 2024"
+      },
+      {
+        "label": "Drivetrain",
+        "value": "SRAM XX1 Eagle Wireless AXS, 2022"
+      },
+      {
+        "label": "Cassette",
+        "value": "SRAM XX1 Eagle (Rainbow), 2025"
+      },
+      {
+        "label": "Chainring",
+        "value": "AbsoluteBlack Oval 28T, 2022"
+      },
+      {
+        "label": "Bottom Bracket",
+        "value": "SRAM, new 2025"
+      },
+      {
+        "label": "Chain",
+        "value": "KMC DLC 12 Green/Black, new 2025"
+      },
+      {
+        "label": "Pulley System",
+        "value": "Garbaruk Custom Oversized Pulleys, 2022"
+      },
+      {
+        "label": "Dropper Post",
+        "value": "Fox Transfer, new 2025"
+      },
+      {
+        "label": "Headset",
+        "value": "Chris King, 2022"
+      },
+      {
+        "label": "Stem",
+        "value": "Deity, 2022"
+      },
+      {
+        "label": "Handlebars",
+        "value": "Carbon Bars"
+      },
+      {
+        "label": "Grips",
+        "value": "ODI Lock-On, 2023"
+      },
+      {
+        "label": "Brakes",
+        "value": "Hope Tech 4 V4 Hydraulic Disc Brakes, 2024"
+      },
+      {
+        "label": "Rotors",
+        "value": "220mm Giant, front and rear, 2023"
+      },
+      {
+        "label": "Tires",
+        "value": "Maxxis DHF (front) and DHR II (rear), new 2025"
+      },
+      {
+        "label": "Setup",
+        "value": "Tubeless, serviced 2025"
+      },
+      {
+        "label": "Finish",
+        "value": "Custom Decals"
+      }
+    ],
+    "originalPrice": "$11,200",
+    "price": "$4,000",
+    "year": "Various",
+    "mainImage": "/images/bikes/e589b2df-523b-4068-9937-10f6b247faa9/main.jpg",
+    "gallery": [
+      "/images/bikes/e589b2df-523b-4068-9937-10f6b247faa9/1.jpg",
+      "/images/bikes/e589b2df-523b-4068-9937-10f6b247faa9/2.jpg",
+      "/images/bikes/e589b2df-523b-4068-9937-10f6b247faa9/3.jpg",
+      "/images/bikes/e589b2df-523b-4068-9937-10f6b247faa9/4.jpg",
+      "/images/bikes/e589b2df-523b-4068-9937-10f6b247faa9/5.jpg",
+      "/images/bikes/e589b2df-523b-4068-9937-10f6b247faa9/6.jpg",
+      "/images/bikes/e589b2df-523b-4068-9937-10f6b247faa9/7.jpg",
+      "/images/bikes/e589b2df-523b-4068-9937-10f6b247faa9/8.jpg",
+      "/images/bikes/e589b2df-523b-4068-9937-10f6b247faa9/9.jpg",
+      "/images/bikes/e589b2df-523b-4068-9937-10f6b247faa9/10.jpg",
+      "/images/bikes/e589b2df-523b-4068-9937-10f6b247faa9/11.jpg",
+      "/images/bikes/e589b2df-523b-4068-9937-10f6b247faa9/12.jpg",
+      "/images/bikes/e589b2df-523b-4068-9937-10f6b247faa9/13.jpg",
+      "/images/bikes/e589b2df-523b-4068-9937-10f6b247faa9/14.jpg"
+    ],
+    "slug": "santa-cruz-nomad",
+    "background": "#9316E1",
+    "foreground": "#23E71D"
+  },
+  {
+    "id": "f31464fd-5d2c-4991-b20f-a574a07cac4c",
+    "show": true,
+    "sold": false,
+    "ranking": 5,
+    "title": "Specialized Turbo Kenevo SL - Expert / S-Works",
+    "description": "This 2023 Specialized Kenevo SL Expert sits in a sweet spot between the stock Expert and an S-Works build, combining the ride quality of the Kenevo SL platform with meaningful, high-end upgrades. The SRAM GX AXS wireless drivetrain delivers crisp, reliable shifting, while the carbon Roval wheelset drops weight and sharpens handling on both climbs and descents. The result is a lighter, more responsive Kenevo SL that retains the durability and capability the bike is known for, without the S-Works price tag. The bike has been well maintained, fully serviced, and is dialed and ready to ride.",
+    "specs": [
+      {
+        "label": "Size",
+        "value": "Medium (S3)"
+      },
+      {
+        "label": "Frame",
+        "value": "FACT 11m Carbon Frame, 29\", 170mm rear travel"
+      },
+      {
+        "label": "Motor",
+        "value": "Specialized SL 1.1 Lightweight Motor"
+      },
+      {
+        "label": "Battery",
+        "value": "Specialized SL1-320, 320Wh, integrated"
+      },
+      {
+        "label": "Display / Remote",
+        "value": "Specialized MasterMind TCU"
+      },
+      {
+        "label": "Fork",
+        "value": "FOX Float 38 Performance Elite, GRIP2, 170mm"
+      },
+      {
+        "label": "Rear Shock",
+        "value": "FOX Float X2 Performance, 170mm"
+      },
+      {
+        "label": "Drivetrain",
+        "value": "SRAM GX AXS Eagle Wireless, 12-speed"
+      },
+      {
+        "label": "Cassette",
+        "value": "SRAM Eagle 10–52T"
+      },
+      {
+        "label": "Crankset",
+        "value": "Praxis Forged"
+      },
+      {
+        "label": "Chainring",
+        "value": "SRAM X-Sync Eagle 32T"
+      },
+      {
+        "label": "Brakes",
+        "value": "SRAM Code RS, 4-piston hydraulic disc"
+      },
+      {
+        "label": "Rotors",
+        "value": "220mm front, 200mm rear"
+      },
+      {
+        "label": "Wheelset",
+        "value": "Roval Carbon Wheels 29\""
+      },
+      {
+        "label": "Tires",
+        "value": "Specialized Butcher, 29 x 2.3\""
+      },
+      {
+        "label": "Seatpost",
+        "value": "X-Fusion Manic Dropper Post"
+      },
+      {
+        "label": "Handlebars",
+        "value": "Specialized Trail Alloy"
+      },
+      {
+        "label": "Stem",
+        "value": "Alloy Trail Stem"
+      },
+      {
+        "label": "Grips",
+        "value": "Deity Knuckleduster"
+      },
+      {
+        "label": "Cable Routing",
+        "value": "Internal"
+      },
+      {
+        "label": "Extras",
+        "value": "SWAT CC integrated tool system"
+      },
+      {
+        "label": "Condition",
+        "value": "Excellent"
+      }
+    ],
+    "originalPrice": "$13,500",
+    "price": "$5,000",
+    "year": "2023",
+    "mainImage": "/images/bikes/f31464fd-5d2c-4991-b20f-a574a07cac4c/main.jpg",
+    "gallery": [],
+    "slug": "specialized-turbo-kenevo-sl-expert-/-s-works",
+    "background": "#FFE945",
+    "foreground": "#000000"
+  },
+  {
+    "id": "f3e4ecc7-9686-4da2-97ae-07a94582b05e",
+    "show": true,
+    "sold": true,
+    "ranking": 26,
+    "title": "Specialized Levo Expert",
+    "description": "",
+    "specs": [],
+    "originalPrice": "",
+    "price": "",
+    "year": "",
+    "mainImage": "/images/bikes/f3e4ecc7-9686-4da2-97ae-07a94582b05e/main.jpg",
+    "gallery": [],
+    "slug": "specialized-levo-expert",
+    "background": "",
+    "foreground": ""
+  }
+]
