@@ -1,20 +1,23 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getBikes, saveBikes } from "@/lib/bikes";
 import type { Bike } from "@/lib/bikes";
+import { getAdminPassword } from "@/lib/config";
 import { randomUUID } from "crypto";
-
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "kians-garage-2024";
 
 function checkAuth(request: NextRequest): boolean {
   const auth = request.headers.get("authorization");
-  return auth === `Bearer ${ADMIN_PASSWORD}`;
+  return auth === `Bearer ${getAdminPassword()}`;
 }
 
 export async function GET() {
   const bikes = getBikes();
-  // Sort: unsold first, then by ranking
+  // Pending first, then unsold, then sold
   bikes.sort((a, b) => {
+    if (a.pending !== b.pending) return a.pending ? -1 : 1;
     if (a.sold !== b.sold) return a.sold ? 1 : -1;
+    const aTime = a.statusChangedAt || "1970-01-01";
+    const bTime = b.statusChangedAt || "1970-01-01";
+    if (aTime !== bTime) return bTime.localeCompare(aTime);
     return a.ranking - b.ranking;
   });
   return NextResponse.json(bikes);
@@ -32,7 +35,11 @@ export async function POST(request: NextRequest) {
     id: randomUUID(),
     show: true,
     sold: false,
+    pending: false,
+    ownerName: body.ownerName || "",
+    ownerPhone: body.ownerPhone || "",
     ranking: body.ranking || Math.max(...bikes.map((b) => b.ranking), 0) + 1,
+    statusChangedAt: new Date().toISOString(),
     title: body.title || "",
     description: body.description || "",
     specs: body.specs || [],
@@ -69,6 +76,11 @@ export async function PUT(request: NextRequest) {
 
   if (index === -1) {
     return NextResponse.json({ error: "Bike not found" }, { status: 404 });
+  }
+
+  // Track when sold status changes
+  if ("sold" in body && body.sold !== bikes[index].sold) {
+    body.statusChangedAt = new Date().toISOString();
   }
 
   bikes[index] = { ...bikes[index], ...body };

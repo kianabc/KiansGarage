@@ -5,7 +5,11 @@ export interface Bike {
   id: string;
   show: boolean;
   sold: boolean;
+  pending: boolean;
+  ownerName: string;
+  ownerPhone: string;
   ranking: number;
+  statusChangedAt: string;
   title: string;
   description: string;
   specs: { label: string; value: string }[];
@@ -27,16 +31,18 @@ export function getBikes(): Bike[] {
 }
 
 export function getBikesSorted(): Bike[] {
-  const bikes = getBikes().filter((b) => b.show);
+  const bikes = getBikes().filter((b) => b.show && !b.pending);
   return bikes.sort((a, b) => {
-    // Unsold first, then by ranking ascending
     if (a.sold !== b.sold) return a.sold ? 1 : -1;
+    const aTime = a.statusChangedAt || "1970-01-01";
+    const bTime = b.statusChangedAt || "1970-01-01";
+    if (aTime !== bTime) return bTime.localeCompare(aTime);
     return a.ranking - b.ranking;
   });
 }
 
 export function getBikeBySlug(slug: string): Bike | undefined {
-  return getBikes().find((b) => b.slug === slug);
+  return getBikes().find((b) => b.slug === slug && !b.pending);
 }
 
 export function saveBikes(bikes: Bike[]): void {

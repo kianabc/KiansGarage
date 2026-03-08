@@ -15,46 +15,35 @@ export default function Home() {
       <header className="border-b border-[var(--card-border)]">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="text-xl font-bold tracking-tight">
-            Kian&apos;s Garage
+            Garage Door Bikes
           </Link>
-          <a
-            href="tel:4352005791"
-            className="text-sm text-[var(--muted)] hover:text-white transition-colors"
+          <Link
+            href="/submit"
+            className="text-sm bg-[var(--accent)] text-black font-semibold px-4 py-1.5 rounded-lg hover:brightness-110 transition"
           >
-            (435) 200-5791
-          </a>
+            List Your Bike
+          </Link>
         </div>
       </header>
 
       {/* Hero / Story */}
       <section className="max-w-7xl mx-auto px-4 py-16 md:py-24">
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-          Bikes built right,
+          Every bike vetted.
           <br />
-          <span className="text-[var(--accent)]">sold honest.</span>
+          <span className="text-[var(--accent)]">No junk gets through.</span>
         </h1>
         <div className="max-w-2xl space-y-4 text-[var(--muted)] text-lg leading-relaxed">
           <p>
-            I&apos;m Kian. I ride, wrench, and obsess over every bike that comes
-            through my garage. Most of the bikes listed here are ones I&apos;ve
-            personally owned, ridden, and maintained. A few belong to close
-            friends whose bikes I&apos;ve helped build and keep in top shape.
+            Garage Door Bikes is a curated marketplace where riders sell to
+            riders. Every listing is personally inspected and approved before it
+            goes live. If a bike doesn&apos;t meet the standard, it doesn&apos;t
+            make the cut.
           </p>
           <p>
-            Every bike that leaves here has been fully serviced, dialed in, and
-            is ready to ride hard from day one. No mystery Craigslist specials,
-            no hidden issues. I stand behind every listing because my name is on
-            it.
-          </p>
-          <p>
-            Interested in something?{" "}
-            <a
-              href="tel:4352005791"
-              className="text-white underline underline-offset-4 hover:text-[var(--accent)] transition-colors"
-            >
-              Call or text me at (435) 200-5791
-            </a>
-            .
+            No mystery Craigslist specials. No misleading photos. Just quality
+            bikes from people who actually ride them, backed by a community that
+            holds the bar high.
           </p>
         </div>
       </section>
@@ -93,14 +82,8 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-[var(--card-border)] mt-8">
-        <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[var(--muted)]">
-          <p>Kian&apos;s Garage &mdash; Salt Lake City, UT</p>
-          <a
-            href="tel:4352005791"
-            className="hover:text-white transition-colors"
-          >
-            (435) 200-5791
-          </a>
+        <div className="max-w-7xl mx-auto px-4 py-8 text-sm text-[var(--muted)] text-center">
+          Garage Door Bikes &mdash; Salt Lake City, UT
         </div>
       </footer>
     </main>
@@ -110,7 +93,7 @@ export default function Home() {
 function BikeCard({
   bike,
 }: {
-  bike: { slug: string; mainImage: string; title: string; price: string; originalPrice: string; year: string };
+  bike: { slug: string; mainImage: string; title: string; price: string; originalPrice: string; year: string; ownerName: string };
 }) {
   return (
     <Link
@@ -125,6 +108,13 @@ function BikeCard({
           className="object-cover group-hover:scale-105 transition-transform duration-300"
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
+        {bike.ownerName && (
+          <div className="absolute top-2 right-2">
+            <span className="bg-purple-600/90 text-white text-xs font-medium px-2.5 py-1 rounded-full shadow-lg">
+              Listed for {bike.ownerName}
+            </span>
+          </div>
+        )}
       </div>
       <div className="p-4">
         <h3 className="font-semibold text-lg leading-tight mb-2">
@@ -155,7 +145,7 @@ function SoldBikeCard({
 }) {
   const hasDetail = bike.description.length > 0;
   const className =
-    "group block bg-[var(--card-bg)] border border-[var(--card-border)] rounded-lg overflow-hidden opacity-60 hover:opacity-80 transition-opacity";
+    "group block bg-[var(--card-bg)] border border-[var(--card-border)] rounded-lg overflow-hidden hover:border-[var(--muted)] transition-colors";
 
   const content = (
     <>
@@ -164,11 +154,11 @@ function SoldBikeCard({
           src={bike.mainImage}
           alt={bike.title}
           fill
-          className="object-cover grayscale"
+          className="object-cover"
           sizes="(max-width: 768px) 50vw, 25vw"
         />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="bg-black/70 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+        <div className="absolute top-2 left-2">
+          <span className="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
             Sold
           </span>
         </div>

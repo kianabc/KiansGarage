@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Kian's Garage | Quality Bikes For Sale",
+  title: "Garage Door Bikes | Quality Bikes For Sale",
   description:
-    "Hand-picked, well-maintained bikes from a rider who actually cares. Mountain bikes, e-MTBs, road bikes, and more.",
+    "A curated bike marketplace where every listing is inspected and approved. Riders selling to riders. No junk gets through.",
 };
 
 export default function RootLayout({

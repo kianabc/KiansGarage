@@ -14,7 +14,11 @@
     "gallery": [],
     "slug": "specialized-stumpjumper-expert",
     "background": "",
-    "foreground": ""
+    "foreground": "",
+    "statusChangedAt": "",
+    "pending": false,
+    "ownerName": "",
+    "ownerPhone": ""
   },
   {
     "id": "1d714a98-1ebe-4bed-8c55-17da6ef3a9c3",
@@ -122,7 +126,11 @@
     ],
     "slug": "fuji-altamira-ltd-team-edition",
     "background": "#000000",
-    "foreground": "#BFF96D"
+    "foreground": "#BFF96D",
+    "statusChangedAt": "",
+    "pending": false,
+    "ownerName": "",
+    "ownerPhone": ""
   },
   {
     "id": "3132f6a0-bb96-4909-96fe-a1a6439ca125",
@@ -139,7 +147,11 @@
     "gallery": [],
     "slug": "ibis-ripmo",
     "background": "",
-    "foreground": ""
+    "foreground": "",
+    "statusChangedAt": "",
+    "pending": false,
+    "ownerName": "",
+    "ownerPhone": ""
   },
   {
     "id": "455c9099-588f-4b30-be2a-b0754d65fcce",
@@ -156,7 +168,11 @@
     "gallery": [],
     "slug": "specialized-levo-comp-alloy",
     "background": "",
-    "foreground": ""
+    "foreground": "",
+    "statusChangedAt": "",
+    "pending": false,
+    "ownerName": "",
+    "ownerPhone": ""
   },
   {
     "id": "4c6a337e-3956-4291-a2fa-fc51f81458cd",
@@ -173,7 +189,11 @@
     "gallery": [],
     "slug": "scott-16\"",
     "background": "",
-    "foreground": ""
+    "foreground": "",
+    "statusChangedAt": "",
+    "pending": false,
+    "ownerName": "",
+    "ownerPhone": ""
   },
   {
     "id": "50aede3a-324f-4c46-893e-78b6f1ff4414",
@@ -190,7 +210,11 @@
     "gallery": [],
     "slug": "specialized-levo-expert",
     "background": "",
-    "foreground": ""
+    "foreground": "",
+    "statusChangedAt": "",
+    "pending": false,
+    "ownerName": "",
+    "ownerPhone": ""
   },
   {
     "id": "5ad452c2-f189-4151-81dd-52106e56d1cb",
@@ -207,7 +231,11 @@
     "gallery": [],
     "slug": "specialized-kenevo-expert",
     "background": "",
-    "foreground": ""
+    "foreground": "",
+    "statusChangedAt": "",
+    "pending": false,
+    "ownerName": "",
+    "ownerPhone": ""
   },
   {
     "id": "630fb44f-cb55-4ae6-b74a-b2c247aa4f73",
@@ -224,7 +252,11 @@
     "gallery": [],
     "slug": "specialized-levo-comp-carbon",
     "background": "",
-    "foreground": ""
+    "foreground": "",
+    "statusChangedAt": "",
+    "pending": false,
+    "ownerName": "",
+    "ownerPhone": ""
   },
   {
     "id": "66227f06-b622-45b1-80fa-fde983e7a192",
@@ -241,7 +273,11 @@
     "gallery": [],
     "slug": "specialized-rockhopper-expert",
     "background": "",
-    "foreground": ""
+    "foreground": "",
+    "statusChangedAt": "",
+    "pending": false,
+    "ownerName": "",
+    "ownerPhone": ""
   },
   {
     "id": "7a6b0c55-a10e-456e-8ef5-f667b1e7a860",
@@ -258,7 +294,11 @@
     "gallery": [],
     "slug": "specialized-levo-comp-carbon",
     "background": "",
-    "foreground": ""
+    "foreground": "",
+    "statusChangedAt": "",
+    "pending": false,
+    "ownerName": "",
+    "ownerPhone": ""
   },
   {
     "id": "9128bae5-33f1-4d83-8630-65b0b73c7d13",
@@ -275,7 +315,11 @@
     "gallery": [],
     "slug": "specialized-levo-comp-carbon",
     "background": "",
-    "foreground": ""
+    "foreground": "",
+    "statusChangedAt": "",
+    "pending": false,
+    "ownerName": "",
+    "ownerPhone": ""
   },
   {
     "id": "924960a1-f74e-4828-be74-3d95fa322881",
@@ -292,7 +336,11 @@
     "gallery": [],
     "slug": "salma-mukluk",
     "background": "",
-    "foreground": ""
+    "foreground": "",
+    "statusChangedAt": "",
+    "pending": false,
+    "ownerName": "",
+    "ownerPhone": ""
   },
   {
     "id": "9815e819-6263-4993-94bb-3db7bd832903",
@@ -309,7 +357,11 @@
     "gallery": [],
     "slug": "specialized-levo-sl-comp-carbon",
     "background": "",
-    "foreground": ""
+    "foreground": "",
+    "statusChangedAt": "",
+    "pending": false,
+    "ownerName": "",
+    "ownerPhone": ""
   },
   {
     "id": "98e9e15a-948d-4bec-bc9d-9f2e011a707f",
@@ -422,7 +474,11 @@
     ],
     "slug": "specialized-turbo-levo-comp-carbon",
     "background": "#FF0000",
-    "foreground": "#000000"
+    "foreground": "#000000",
+    "statusChangedAt": "2026-03-08T05:29:13.431Z",
+    "pending": false,
+    "ownerName": "",
+    "ownerPhone": ""
   },
   {
     "id": "9bd59740-5dca-432e-9664-156f1fc313f3",
@@ -439,7 +495,11 @@
     "gallery": [],
     "slug": "specialized-levo-sl-comp-carbon",
     "background": "",
-    "foreground": ""
+    "foreground": "",
+    "statusChangedAt": "",
+    "pending": false,
+    "ownerName": "",
+    "ownerPhone": ""
   },
   {
     "id": "a2749195-91c7-4a9a-be9f-4e557016bbfc",
@@ -456,7 +516,11 @@
     "gallery": [],
     "slug": "richie-break-away",
     "background": "",
-    "foreground": ""
+    "foreground": "",
+    "statusChangedAt": "",
+    "pending": false,
+    "ownerName": "",
+    "ownerPhone": ""
   },
   {
     "id": "a9664ff9-c6e5-495c-842d-010d2248b5d8",
@@ -599,7 +663,11 @@
     ],
     "slug": "luna-z1-ludicrous",
     "background": "#000000",
-    "foreground": "#FF0000"
+    "foreground": "#FF0000",
+    "statusChangedAt": "2026-03-08T05:29:16.978Z",
+    "pending": false,
+    "ownerName": "",
+    "ownerPhone": ""
   },
   {
     "id": "ab842ee7-8dca-4f8a-9cf3-5637680c60c5",
@@ -616,7 +684,11 @@
     "gallery": [],
     "slug": "specialized-fatboy",
     "background": "",
-    "foreground": ""
+    "foreground": "",
+    "statusChangedAt": "",
+    "pending": false,
+    "ownerName": "",
+    "ownerPhone": ""
   },
   {
     "id": "cbf7b8d0-038f-43cb-b4b2-465d82d2d48f",
@@ -633,7 +705,11 @@
     "gallery": [],
     "slug": "specialized-riprock-16",
     "background": "",
-    "foreground": ""
+    "foreground": "",
+    "statusChangedAt": "",
+    "pending": false,
+    "ownerName": "",
+    "ownerPhone": ""
   },
   {
     "id": "e589b2df-523b-4068-9937-10f6b247faa9",
@@ -754,12 +830,16 @@
     ],
     "slug": "santa-cruz-nomad",
     "background": "#9316E1",
-    "foreground": "#23E71D"
+    "foreground": "#23E71D",
+    "statusChangedAt": "2026-03-08T05:29:18.972Z",
+    "pending": false,
+    "ownerName": "",
+    "ownerPhone": ""
   },
   {
     "id": "f31464fd-5d2c-4991-b20f-a574a07cac4c",
     "show": true,
-    "sold": false,
+    "sold": true,
     "ranking": 5,
     "title": "Specialized Turbo Kenevo SL - Expert / S-Works",
     "description": "This 2023 Specialized Kenevo SL Expert sits in a sweet spot between the stock Expert and an S-Works build, combining the ride quality of the Kenevo SL platform with meaningful, high-end upgrades. The SRAM GX AXS wireless drivetrain delivers crisp, reliable shifting, while the carbon Roval wheelset drops weight and sharpens handling on both climbs and descents. The result is a lighter, more responsive Kenevo SL that retains the durability and capability the bike is known for, without the S-Works price tag. The bike has been well maintained, fully serviced, and is dialed and ready to ride.",
@@ -860,7 +940,11 @@
     "gallery": [],
     "slug": "specialized-turbo-kenevo-sl-expert-/-s-works",
     "background": "#FFE945",
-    "foreground": "#000000"
+    "foreground": "#000000",
+    "statusChangedAt": "2026-03-08T05:29:20.431Z",
+    "pending": false,
+    "ownerName": "",
+    "ownerPhone": ""
   },
   {
     "id": "f3e4ecc7-9686-4da2-97ae-07a94582b05e",
@@ -877,6 +961,10 @@
     "gallery": [],
     "slug": "specialized-levo-expert",
     "background": "",
-    "foreground": ""
+    "foreground": "",
+    "statusChangedAt": "",
+    "pending": false,
+    "ownerName": "",
+    "ownerPhone": ""
   }
 ]

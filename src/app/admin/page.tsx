@@ -8,7 +8,11 @@ interface Bike {
   id: string;
   show: boolean;
   sold: boolean;
+  pending: boolean;
+  ownerName: string;
+  ownerPhone: string;
   ranking: number;
+  statusChangedAt: string;
   title: string;
   description: string;
   specs: { label: string; value: string }[];
@@ -29,6 +33,10 @@ export default function AdminPage() {
   const [error, setError] = useState("");
   const [editing, setEditing] = useState<Bike | null>(null);
   const [adding, setAdding] = useState(false);
+  const [showPasswordChange, setShowPasswordChange] = useState(false);
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [passwordMsg, setPasswordMsg] = useState("");
 
   const fetchBikes = useCallback(async () => {
     const res = await fetch("/api/bikes");
@@ -85,6 +93,18 @@ export default function AdminPage() {
     if (res.ok) fetchBikes();
   }
 
+  async function approveBike(bike: Bike) {
+    const res = await fetch("/api/bikes", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ id: bike.id, pending: false, show: true }),
+    });
+    if (res.ok) fetchBikes();
+  }
+
   async function saveBike(bike: Partial<Bike>) {
     const method = bike.id ? "PUT" : "POST";
     const res = await fetch("/api/bikes", {
@@ -99,6 +119,36 @@ export default function AdminPage() {
       setEditing(null);
       setAdding(false);
       fetchBikes();
+    }
+  }
+
+  async function handlePasswordChange(e: React.FormEvent) {
+    e.preventDefault();
+    setPasswordMsg("");
+    if (newPassword !== confirmPassword) {
+      setPasswordMsg("Passwords don't match");
+      return;
+    }
+    const res = await fetch("/api/auth", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ newPassword }),
+    });
+    if (res.ok) {
+      const { token: t } = await res.json();
+      setToken(t);
+      sessionStorage.setItem("admin_token", t);
+      setNewPassword("");
+      setConfirmPassword("");
+      setShowPasswordChange(false);
+      setPasswordMsg("Password updated!");
+      setTimeout(() => setPasswordMsg(""), 3000);
+    } else {
+      const data = await res.json();
+      setPasswordMsg(data.error || "Failed to update password");
     }
   }
 
@@ -143,19 +193,75 @@ export default function AdminPage() {
             </Link>
             <h1 className="text-lg font-bold">Admin</h1>
           </div>
-          <button
-            onClick={() => {
-              sessionStorage.removeItem("admin_token");
-              setToken(null);
-            }}
-            className="text-sm text-[var(--muted)] hover:text-white transition-colors"
-          >
-            Log Out
-          </button>
+          <div className="flex items-center gap-4">
+            <button
+              onClick={() => setShowPasswordChange(!showPasswordChange)}
+              className="text-sm text-[var(--muted)] hover:text-white transition-colors"
+            >
+              Change Password
+            </button>
+            <button
+              onClick={() => {
+                sessionStorage.removeItem("admin_token");
+                setToken(null);
+              }}
+              className="text-sm text-[var(--muted)] hover:text-white transition-colors"
+            >
+              Log Out
+            </button>
+          </div>
         </div>
       </header>
 
       <div className="max-w-7xl mx-auto px-4 py-8">
+        {passwordMsg && !showPasswordChange && (
+          <div className="mb-4 text-sm text-green-400">{passwordMsg}</div>
+        )}
+
+        {showPasswordChange && (
+          <form
+            onSubmit={handlePasswordChange}
+            className="bg-[var(--card-bg)] border border-[var(--card-border)] rounded-lg p-6 mb-6 max-w-sm space-y-3"
+          >
+            <h3 className="font-bold">Change Password</h3>
+            <input
+              type="password"
+              value={newPassword}
+              onChange={(e) => setNewPassword(e.target.value)}
+              placeholder="New password"
+              className="w-full bg-black border border-[var(--card-border)] rounded px-3 py-2 text-sm focus:outline-none focus:border-[var(--accent)]"
+            />
+            <input
+              type="password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              placeholder="Confirm new password"
+              className="w-full bg-black border border-[var(--card-border)] rounded px-3 py-2 text-sm focus:outline-none focus:border-[var(--accent)]"
+            />
+            {passwordMsg && (
+              <p className="text-red-400 text-sm">{passwordMsg}</p>
+            )}
+            <div className="flex gap-3">
+              <button
+                type="submit"
+                className="bg-[var(--accent)] text-black font-semibold px-4 py-2 rounded text-sm hover:brightness-110 transition"
+              >
+                Update Password
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setShowPasswordChange(false);
+                  setPasswordMsg("");
+                }}
+                className="text-[var(--muted)] hover:text-white text-sm transition-colors"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+        )}
+
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl font-bold">
             Bikes ({bikes.length})
@@ -182,73 +288,151 @@ export default function AdminPage() {
           />
         )}
 
-        <div className="space-y-2">
-          {bikes.map((bike) => (
-            <div
-              key={bike.id}
-              className={`flex items-center gap-4 bg-[var(--card-bg)] border border-[var(--card-border)] rounded-lg p-3 ${
-                !bike.show ? "opacity-40" : ""
-              }`}
-            >
-              <div className="relative w-16 h-12 shrink-0 rounded overflow-hidden bg-black">
-                {bike.mainImage && (
-                  <Image
-                    src={bike.mainImage}
-                    alt={bike.title}
-                    fill
-                    className="object-cover"
-                    sizes="64px"
-                  />
-                )}
-              </div>
-
-              <div className="flex-1 min-w-0">
-                <p className="font-medium text-sm truncate">{bike.title}</p>
-                <p className="text-xs text-[var(--muted)]">
-                  Rank: {bike.ranking} &middot; {bike.price || "No price"}{" "}
-                  &middot; {bike.year || "No year"}
-                </p>
-              </div>
-
-              <div className="flex items-center gap-2 shrink-0">
-                <button
-                  onClick={() => toggleField(bike, "sold")}
-                  className={`text-xs px-3 py-1 rounded-full font-medium ${
-                    bike.sold
-                      ? "bg-red-500/20 text-red-400"
-                      : "bg-green-500/20 text-green-400"
-                  }`}
-                >
-                  {bike.sold ? "Sold" : "Available"}
-                </button>
-                <button
-                  onClick={() => toggleField(bike, "show")}
-                  className={`text-xs px-3 py-1 rounded-full font-medium ${
-                    bike.show
-                      ? "bg-blue-500/20 text-blue-400"
-                      : "bg-gray-500/20 text-gray-400"
-                  }`}
-                >
-                  {bike.show ? "Visible" : "Hidden"}
-                </button>
-                <button
-                  onClick={() => {
-                    setEditing(bike);
-                    setAdding(false);
-                  }}
-                  className="text-xs text-[var(--muted)] hover:text-white px-2 py-1"
-                >
-                  Edit
-                </button>
-                <button
-                  onClick={() => deleteBike(bike.id)}
-                  className="text-xs text-red-400 hover:text-red-300 px-2 py-1"
-                >
-                  Delete
-                </button>
-              </div>
+        {/* Pending Submissions */}
+        {bikes.some((b) => b.pending) && (
+          <div className="mb-8">
+            <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
+              <span className="inline-block w-2.5 h-2.5 rounded-full bg-yellow-500" />
+              Pending Review ({bikes.filter((b) => b.pending).length})
+            </h3>
+            <div className="space-y-2">
+              {bikes
+                .filter((b) => b.pending)
+                .map((bike) => (
+                  <div
+                    key={bike.id}
+                    className="bg-yellow-500/5 border border-yellow-500/30 rounded-lg p-4"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="flex-1 min-w-0">
+                        <p className="font-medium text-sm">
+                          {bike.title}
+                          <span className="ml-2 text-xs text-yellow-400">
+                            submitted by {bike.ownerName}
+                            {bike.ownerPhone && ` (${bike.ownerPhone})`}
+                          </span>
+                        </p>
+                        <p className="text-xs text-[var(--muted)] mt-1">
+                          {bike.price} &middot; {bike.year || "No year"}
+                        </p>
+                        {bike.description && (
+                          <p className="text-xs text-[var(--muted)] mt-2 line-clamp-2">
+                            {bike.description}
+                          </p>
+                        )}
+                        {bike.specs.length > 0 && (
+                          <p className="text-xs text-[var(--muted)] mt-1">
+                            {bike.specs.length} specs provided
+                          </p>
+                        )}
+                      </div>
+                      <div className="flex items-center gap-2 shrink-0">
+                        <button
+                          onClick={() => approveBike(bike)}
+                          className="text-xs px-3 py-1.5 rounded-full font-medium bg-green-500/20 text-green-400 hover:bg-green-500/30 transition"
+                        >
+                          Approve
+                        </button>
+                        <button
+                          onClick={() => {
+                            setEditing(bike);
+                            setAdding(false);
+                          }}
+                          className="text-xs text-[var(--muted)] hover:text-white px-2 py-1"
+                        >
+                          Edit
+                        </button>
+                        <button
+                          onClick={() => deleteBike(bike.id)}
+                          className="text-xs text-red-400 hover:text-red-300 px-2 py-1"
+                        >
+                          Reject
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
             </div>
-          ))}
+          </div>
+        )}
+
+        {/* Active Bikes */}
+        <div className="space-y-2">
+          {bikes
+            .filter((b) => !b.pending)
+            .map((bike) => (
+              <div
+                key={bike.id}
+                className={`flex items-center gap-4 bg-[var(--card-bg)] border border-[var(--card-border)] rounded-lg p-3 ${
+                  !bike.show ? "opacity-40" : ""
+                }`}
+              >
+                <div className="relative w-16 h-12 shrink-0 rounded overflow-hidden bg-black">
+                  {bike.mainImage && (
+                    <Image
+                      src={bike.mainImage}
+                      alt={bike.title}
+                      fill
+                      className="object-cover"
+                      sizes="64px"
+                    />
+                  )}
+                </div>
+
+                <div className="flex-1 min-w-0">
+                  <p className="font-medium text-sm truncate">
+                    {bike.title}
+                    {bike.ownerName && (
+                      <span className="ml-2 text-xs text-purple-400">
+                        ({bike.ownerName})
+                      </span>
+                    )}
+                  </p>
+                  <p className="text-xs text-[var(--muted)]">
+                    {bike.price || "No price"} &middot;{" "}
+                    {bike.year || "No year"}
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-2 shrink-0">
+                  <button
+                    onClick={() => toggleField(bike, "sold")}
+                    className={`text-xs px-3 py-1 rounded-full font-medium ${
+                      bike.sold
+                        ? "bg-red-500/20 text-red-400"
+                        : "bg-green-500/20 text-green-400"
+                    }`}
+                  >
+                    {bike.sold ? "Sold" : "Available"}
+                  </button>
+                  <button
+                    onClick={() => toggleField(bike, "show")}
+                    className={`text-xs px-3 py-1 rounded-full font-medium ${
+                      bike.show
+                        ? "bg-blue-500/20 text-blue-400"
+                        : "bg-gray-500/20 text-gray-400"
+                    }`}
+                  >
+                    {bike.show ? "Visible" : "Hidden"}
+                  </button>
+                  <button
+                    onClick={() => {
+                      setEditing(bike);
+                      setAdding(false);
+                    }}
+                    className="text-xs text-[var(--muted)] hover:text-white px-2 py-1"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    onClick={() => deleteBike(bike.id)}
+                    className="text-xs text-red-400 hover:text-red-300 px-2 py-1"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </div>
+            ))}
         </div>
       </div>
     </div>
