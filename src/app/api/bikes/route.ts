@@ -1,16 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getBikes, saveBikes } from "@/lib/bikes";
+import { getBikes, saveBike, deleteBikeById, getBikeById, getMaxRanking } from "@/lib/bikes";
 import type { Bike } from "@/lib/bikes";
 import { getAdminPassword } from "@/lib/config";
 import { randomUUID } from "crypto";
 
-function checkAuth(request: NextRequest): boolean {
+async function checkAuth(request: NextRequest): Promise<boolean> {
   const auth = request.headers.get("authorization");
-  return auth === `Bearer ${getAdminPassword()}`;
+  return auth === `Bearer ${await getAdminPassword()}`;
 }
 
 export async function GET() {
-  const bikes = getBikes();
+  const bikes = await getBikes();
   // Pending first, then unsold, then sold
   bikes.sort((a, b) => {
     if (a.pending !== b.pending) return a.pending ? -1 : 1;
@@ -24,12 +24,12 @@ export async function GET() {
 }
 
 export async function POST(request: NextRequest) {
-  if (!checkAuth(request)) {
+  if (!(await checkAuth(request))) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
   const body = await request.json();
-  const bikes = getBikes();
+  const maxRanking = await getMaxRanking();
 
   const newBike: Bike = {
     id: randomUUID(),
@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
     pending: false,
     ownerName: body.ownerName || "",
     ownerPhone: body.ownerPhone || "",
-    ranking: body.ranking || Math.max(...bikes.map((b) => b.ranking), 0) + 1,
+    ranking: body.ranking || maxRanking + 1,
     statusChangedAt: new Date().toISOString(),
     title: body.title || "",
     description: body.description || "",
@@ -59,38 +59,36 @@ export async function POST(request: NextRequest) {
     foreground: body.foreground || "",
   };
 
-  bikes.push(newBike);
-  saveBikes(bikes);
+  await saveBike(newBike);
 
   return NextResponse.json(newBike, { status: 201 });
 }
 
 export async function PUT(request: NextRequest) {
-  if (!checkAuth(request)) {
+  if (!(await checkAuth(request))) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
   const body = await request.json();
-  const bikes = getBikes();
-  const index = bikes.findIndex((b) => b.id === body.id);
+  const existing = await getBikeById(body.id);
 
-  if (index === -1) {
+  if (!existing) {
     return NextResponse.json({ error: "Bike not found" }, { status: 404 });
   }
 
   // Track when sold status changes
-  if ("sold" in body && body.sold !== bikes[index].sold) {
+  if ("sold" in body && body.sold !== existing.sold) {
     body.statusChangedAt = new Date().toISOString();
   }
 
-  bikes[index] = { ...bikes[index], ...body };
-  saveBikes(bikes);
+  const updated = { ...existing, ...body };
+  await saveBike(updated);
 
-  return NextResponse.json(bikes[index]);
+  return NextResponse.json(updated);
 }
 
 export async function DELETE(request: NextRequest) {
-  if (!checkAuth(request)) {
+  if (!(await checkAuth(request))) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
@@ -101,13 +99,11 @@ export async function DELETE(request: NextRequest) {
     return NextResponse.json({ error: "Missing id" }, { status: 400 });
   }
 
-  const bikes = getBikes();
-  const filtered = bikes.filter((b) => b.id !== id);
+  const deleted = await deleteBikeById(id);
 
-  if (filtered.length === bikes.length) {
+  if (!deleted) {
     return NextResponse.json({ error: "Bike not found" }, { status: 404 });
   }
 
-  saveBikes(filtered);
   return NextResponse.json({ success: true });
 }

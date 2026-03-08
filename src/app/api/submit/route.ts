@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getBikes, saveBikes } from "@/lib/bikes";
+import { saveBike, getMaxRanking } from "@/lib/bikes";
 import type { Bike } from "@/lib/bikes";
 import { randomUUID } from "crypto";
 
@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const bikes = getBikes();
+  const maxRanking = await getMaxRanking();
 
   const newBike: Bike = {
     id: randomUUID(),
@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
     pending: true,
     ownerName: body.ownerName,
     ownerPhone: body.ownerPhone || "",
-    ranking: Math.max(...bikes.map((b) => b.ranking), 0) + 1,
+    ranking: maxRanking + 1,
     statusChangedAt: new Date().toISOString(),
     title: body.title,
     description: body.description,
@@ -40,8 +40,7 @@ export async function POST(request: NextRequest) {
     foreground: "",
   };
 
-  bikes.push(newBike);
-  saveBikes(bikes);
+  await saveBike(newBike);
 
   return NextResponse.json({ success: true, id: newBike.id }, { status: 201 });
 }

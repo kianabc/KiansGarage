@@ -4,8 +4,8 @@ import { getBikesSorted } from "@/lib/bikes";
 
 export const dynamic = "force-dynamic";
 
-export default function Home() {
-  const bikes = getBikesSorted();
+export default async function Home() {
+  const bikes = await getBikesSorted();
   const available = bikes.filter((b) => !b.sold);
   const sold = bikes.filter((b) => b.sold);
 

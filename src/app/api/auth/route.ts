@@ -4,7 +4,7 @@ import { getAdminPassword, setAdminPassword } from "@/lib/config";
 export async function POST(request: NextRequest) {
   const { password } = await request.json();
 
-  if (password === getAdminPassword()) {
+  if (password === (await getAdminPassword())) {
     return NextResponse.json({ token: password });
   }
 
@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
 
 export async function PUT(request: NextRequest) {
   const auth = request.headers.get("authorization");
-  if (auth !== `Bearer ${getAdminPassword()}`) {
+  if (auth !== `Bearer ${await getAdminPassword()}`) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
@@ -26,6 +26,6 @@ export async function PUT(request: NextRequest) {
     );
   }
 
-  setAdminPassword(newPassword);
+  await setAdminPassword(newPassword);
   return NextResponse.json({ token: newPassword });
 }

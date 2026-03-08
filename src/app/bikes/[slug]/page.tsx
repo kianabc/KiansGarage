@@ -7,7 +7,7 @@ import ImageGallery from "./ImageGallery";
 export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
-  const bikes = getBikesSorted();
+  const bikes = await getBikesSorted();
   return bikes
     .filter((b) => b.description)
     .map((b) => ({ slug: b.slug }));
@@ -19,7 +19,7 @@ export default async function BikePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const bike = getBikeBySlug(decodeURIComponent(slug));
+  const bike = await getBikeBySlug(decodeURIComponent(slug));
   if (!bike || !bike.description) return notFound();
 
   const allImages = [bike.mainImage, ...bike.gallery];
